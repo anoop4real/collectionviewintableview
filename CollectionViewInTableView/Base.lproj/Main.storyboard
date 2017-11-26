@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewInTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UtI-St-Gtg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" rowHeight="154" id="ihq-fg-OJL" customClass="CustomTableViewCell" customModule="CollectionViewInTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ihq-fg-OJL" id="W28-bm-NiX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9dW-Kp-jbb">
+                                                    <rect key="frame" x="8" y="7" width="359" height="146"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WaD-fK-8sx">
+                                                        <size key="itemSize" width="111" height="123"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="0TQ-kp-Szg" customClass="CustomCollectionViewCell" customModule="CollectionViewInTableView" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="11.5" width="111" height="123"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="111" height="123"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKX-dv-h6H">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="123"/>
+                                                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="70"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="sKX-dv-h6H" firstAttribute="leading" secondItem="0TQ-kp-Szg" secondAttribute="leading" id="6Lz-qm-T05"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sKX-dv-h6H" secondAttribute="trailing" id="728-dq-xPq"/>
+                                                                <constraint firstItem="sKX-dv-h6H" firstAttribute="top" secondItem="0TQ-kp-Szg" secondAttribute="top" id="8VP-Ui-hls"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sKX-dv-h6H" secondAttribute="bottom" id="rrW-Ij-rp4"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textLabel" destination="sKX-dv-h6H" id="DIi-rb-NOk"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="ihq-fg-OJL" id="9HM-sX-p9C"/>
+                                                        <outlet property="delegate" destination="ihq-fg-OJL" id="wVu-7K-83R"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9dW-Kp-jbb" firstAttribute="top" secondItem="W28-bm-NiX" secondAttribute="top" constant="7" id="JAM-gh-IdT"/>
+                                                <constraint firstItem="9dW-Kp-jbb" firstAttribute="leading" secondItem="W28-bm-NiX" secondAttribute="leading" constant="8" id="MJ9-BQ-3ta"/>
+                                                <constraint firstAttribute="trailing" secondItem="9dW-Kp-jbb" secondAttribute="trailing" constant="8" id="fm6-k2-wfW"/>
+                                                <constraint firstAttribute="bottom" secondItem="9dW-Kp-jbb" secondAttribute="bottom" constant="0.5" id="v8X-eh-QiU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="E4h-b5-7ha"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W0h-ao-7mv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UtI-St-Gtg" secondAttribute="trailing" id="4r7-mg-NPt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UtI-St-Gtg" secondAttribute="bottom" id="JaS-zj-SLc"/>
+                            <constraint firstItem="UtI-St-Gtg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bBS-9h-8F8"/>
+                            <constraint firstItem="UtI-St-Gtg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qEA-GT-02L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataTable" destination="UtI-St-Gtg" id="C9d-9Q-SvE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
